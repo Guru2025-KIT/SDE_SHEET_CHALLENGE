@@ -1,60 +1,58 @@
 package Day29.LongestPalindromeinstring;
 
-class Solution {
-    // Function to reverse the order of words 
-    public String reverseWords(String s) {
-        // StringBuilder for final result
-        StringBuilder result = new StringBuilder();
+public class Optimal {
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() < 1) return "";
         
-        // Pointer starting from the end
-        int i = s.length() - 1;
+        int start = 0;
+        int end = 0;
         
-        // Traverse from right to left
-        while (i >= 0) {
-            // Skip spaces
-            while (i >= 0 && s.charAt(i) == ' ') {
-                i--;
-            }
+        for (int i = 0; i < s.length(); i++) {
+            // Case 1: Odd length palindrome (center is at i)
+            int len1 = expandAroundCenter(s, i, i);
+            // Case 2: Even length palindrome (center is between i and i+1)
+            int len2 = expandAroundCenter(s, i, i + 1);
             
-            // If pointer goes out of bounds, break
-            if (i < 0) break;
+            int maxLen = Math.max(len1, len2);
             
-            // Mark end of word
-            int end = i;
-            
-            // Move left until space or start of string
-            while (i >= 0 && s.charAt(i) != ' ') {
-                i--;
-            }
-            
-            
-            
-            // Add space before appending if result is not empty
-            if (result.length() > 0) {
-                result.append(" ");
-            }
-            
-
-            // // Extract the word
-            // String word = s.substring(i + 1, end + 1);
-            // // Append word
-            // result.append(word);
-
-            for(int j=i+1;j<=end;j++){
-                result.append(s.charAt(j));
+            // If a longer palindrome is found, update the boundaries
+            if (maxLen > end - start) {
+                start = i - (maxLen - 1) / 2;
+                end = i + maxLen / 2;
             }
         }
         
-        return result.toString();
+        return s.substring(start, end + 1);
     }
-}
+    
+    private int expandAroundCenter(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        // Returns the length of the palindrome found
+        return right - left - 1;
+    }
 
-// Driver code
-class optimal {
+    // Main method to run and test your code inside VS Code
     public static void main(String[] args) {
-        Solution obj = new Solution();
-        String s = " amazing coding skills ";
-        System.out.println(obj.reverseWords(s));
+        Optimal solver = new Optimal();
+
+        // Test Case 1: Standard odd/even mix
+        String test1 = "babad";
+        System.out.println("Input: " + test1);
+        System.out.println("Output: " + solver.longestPalindrome(test1)); // Expected: "bab" or "aba"
+        System.out.println("------------------------------------");
+
+        // Test Case 2: Even length palindrome
+        String test2 = "cbbd";
+        System.out.println("Input: " + test2);
+        System.out.println("Output: " + solver.longestPalindrome(test2)); // Expected: "bb"
+        System.out.println("------------------------------------");
+
+        // Test Case 3: Edge case - single character
+        String test3 = "a";
+        System.out.println("Input: " + test3);
+        System.out.println("Output: " + solver.longestPalindrome(test3)); // Expected: "a"
     }
 }
-
