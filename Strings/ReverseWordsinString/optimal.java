@@ -1,4 +1,4 @@
-package Day29.ReverseWordsinString;
+package Strings.ReverseWordsinString;
 
 class Solution {
     // Function to reverse the order of words 

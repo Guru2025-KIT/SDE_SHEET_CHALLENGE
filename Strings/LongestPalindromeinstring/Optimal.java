@@ -1,4 +1,4 @@
-package Day29.LongestPalindromeinstring;
+package Strings.LongestPalindromeinstring;
 
 public class Optimal {
     public String longestPalindrome(String s) {

@@ -1,4 +1,4 @@
-package Day29.ReverseWordsinString;
+package Strings.ReverseWordsinString;
 
 import java.util.*;
 
