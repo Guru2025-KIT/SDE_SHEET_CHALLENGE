@@ -20,14 +20,12 @@ This repository contains my solutions to the **Striver SDE Sheet**, one of the m
 
 ## 📅 Progress
 
-| Day | Topic | Status |
-|------|--------|--------|
-| Day 1 | Arrays | ✅ |
-| Day 2 | Arrays | ✅ |
-| Day 3 | Arrays Part-II | ✅ |
-| Day 4 | Arrays Part-II | ✅ |
-| Day 5 | Arrays Part-III | ✅ |
-| Day 6 | Arrays Part-III | ✅ |
+|Topic | Status |
+|--------|--------|
+|Arrays| Completed|
+|LinkedList| Completed|
+|String| Completed|
+
 
 *Progress table will be updated regularly.*
 
