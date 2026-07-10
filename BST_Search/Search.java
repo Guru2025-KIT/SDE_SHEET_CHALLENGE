@@ -1,5 +1,4 @@
-package BST_Search;
-import java.util.*;
+
 // Definition for a binary tree node
 class TreeNode {
     int val;
@@ -35,7 +34,7 @@ class Solution {
 }
 
 // Driver code
-public class Main {
+public class Search {
     public static void main(String[] args) {
 
         TreeNode root = new TreeNode(4);
