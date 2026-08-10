@@ -40,7 +40,7 @@ Striver-SDE-Sheet/
 ├── Day-04/
 ├── Day-05/
 ├── Day-06/
-└── ...
+└── .... 
 ```
 
 Each folder contains:
