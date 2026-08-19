@@ -12,7 +12,7 @@ This repository contains my solutions to the **Striver SDE Sheet**, one of the m
 
 ## 📚 Sheet Link
 
-🔗 https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+🔗 https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/ 
 
 ## 🛠️ Language
 
