@@ -6,7 +6,7 @@ This repository contains my solutions to the **Striver SDE Sheet**, one of the m
 
 - Solve problems consistently every day
 - Strengthen DSA fundamentals
-- Learn optimal approaches and patterns
+- Learn optimal approaches and patterns 
 - Improve problem-solving skills
 - Prepare for coding interviews
 
